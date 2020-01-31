@@ -1,6 +1,7 @@
 import mysql.connector
 import mysql
 
+
 def importData(allContacts):
 	db = mysql.connector.connect(
 		host="localhost",
@@ -32,3 +33,4 @@ def importData(allContacts):
 	
 		
 	db.commit()
+
