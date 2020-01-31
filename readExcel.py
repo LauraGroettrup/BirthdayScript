@@ -31,6 +31,9 @@ def readContacts():
                         date = re.sub(patternToReplace, '0000', date)
                     person = Person(row[1], row[3], date, row[30])
                     allContacts.append(person)              
-    # For testing
+    return allContacts
+
+# For testing    
+def printContacts(allContacts):
     for person in allContacts:
         print(person.firstname + ' ' + person.lastname + ' ' + person.birthday + ' ' + person.email)

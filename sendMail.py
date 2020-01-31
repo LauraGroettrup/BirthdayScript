@@ -15,9 +15,6 @@ def calculate_age(born):
     today = date.today()
     return today.year - born.year
 
-def makeBirthdayMsg (person):
-	if (person.birthday)
-
 
 # gets a list with all person who should get an email
 # sends email to the birthdayperson, and to yourself
@@ -53,13 +50,13 @@ def sendMails (persons):
             print('Something went wrong')
             print(e)
             exit(1)
-class Person:
-    def __init__(self, firstname, lastname, birthday, email):
-        self.firstname = firstname
-        self.lastname = lastname
-        self.birthday = birthday
-        self.email = email
+#class Person:
+#    def __init__(self, firstname, lastname, birthday, email):
+#        self.firstname = firstname
+#        self.lastname = lastname
+#        self.birthday = birthday
+#        self.email = email
         
-test = Person('Laura','G','28-24-1995','laura@groettrup.com')
-persons.append(test)
-sendMails(persons)
+#test = Person('Laura','G','28-24-1995','laura@groettrup.com')
+#persons.append(test)
+#sendMails(persons)
