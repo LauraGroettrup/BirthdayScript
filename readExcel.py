@@ -26,9 +26,9 @@ def readContacts():
                 # row[1]=firstname row[3]=lastname row[14]=birthday row[30]=email
                 date = row [14]
                 # Must have attributes: first name, email, birthday
-                if (row[1]!= ' ' or date!=' ' or row[30]!=' '):
+                if not(row[1]== '' or date=='' or row[30]==''):
                     if re.match(patternNoYear, date):
-                        date = re.sub(patternToReplace, '0000', date)
+                        date = re.sub(patternToReplace, '1111', date)
                     person = Person(row[1], row[3], date, row[30])
                     allContacts.append(person)              
     return allContacts
