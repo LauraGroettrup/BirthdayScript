@@ -63,7 +63,9 @@ def readContacts():
                 # Must have attributes: first name, email, birthday
                 if not(row[1]== '' or date=='' or row[30]==''):
                     if re.match(patternNoYear, date):
+
                         date = re.sub(patternToReplace, '1111', date)
+
                     person = Person(row[1], row[3], date, row[30])
                     allContacts.append(person)
     csvfile.close()
