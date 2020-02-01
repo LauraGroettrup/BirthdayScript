@@ -10,11 +10,11 @@ YOURNAME = 'Ich'
 persons = []
 
 def calculateAge(born):
-    today = date.today()
+    today = datetime.date.today()
     return today.year - born.year
     
 def makeBirthdayMessage(person):
-    birthdayAsDate = datetime.datetime.strptime(birthday, '%Y-%m-%d').date()
+    birthdayAsDate = datetime.datetime.strptime(person.birthday, '%Y-%m-%d').date()
     if (birthdayAsDate.year == 1111):
         msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + YOURNAME
         return msg
@@ -22,9 +22,9 @@ def makeBirthdayMessage(person):
         age = calculateAge(birthdayAsDate)
         ageStr = str(age) + '.'
         msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum " + ageStr + "Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + YOURNAME
-		return msg
-	
-		
+        return msg
+    
+        
 # gets a list with all person who should get an email
 # sends email to the birthdayperson, and to yourself
 def sendMails (persons):
@@ -36,7 +36,7 @@ def sendMails (persons):
             SMTP_PASS = file.readline().rstrip()
             # email to birthdayperson
             msgForBirthday = EmailMessage()
-            msgForBirthday.set_content(makeBirthdayMsg(person))
+            msgForBirthday.set_content(makeBirthdayMessage(person))
             msgForBirthday['Subject'] = 'Geburtstagsgrüße'
             msgForBirthday['FROM'] = SMTP_USER
             msgForBirthday['To'] = person.email
