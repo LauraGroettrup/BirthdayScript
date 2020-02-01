@@ -6,17 +6,16 @@ import datetime
 USERDATAFILE = 'EmailAccData.txt'
 SMTP_HOST = 'smtp.gmail.com'
 SMTP_PORT = 587
-YOURNAME = 'Ich'
 persons = []
 
 def calculateAge(born):
     today = datetime.date.today()
     return today.year - born.year
     
-def makeBirthdayMessage(person):
+def makeBirthdayMessage(person, yourName):
     birthdayAsDate = datetime.datetime.strptime(person.birthday, '%Y-%m-%d').date()
     if (birthdayAsDate.year == 1111):
-        msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + YOURNAME
+        msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + yourName
         return msg
     else:
         age = calculateAge(birthdayAsDate)
@@ -34,9 +33,10 @@ def sendMails (persons):
             file = open(USERDATAFILE, 'r')
             SMTP_USER = file.readline().rstrip()
             SMTP_PASS = file.readline().rstrip()
+            yourName = file.readline().rstrip()
             # email to birthdayperson
             msgForBirthday = EmailMessage()
-            msgForBirthday.set_content(makeBirthdayMessage(person))
+            msgForBirthday.set_content(makeBirthdayMessage(person,yourName))
             msgForBirthday['Subject'] = 'Geburtstagsgrüße'
             msgForBirthday['FROM'] = SMTP_USER
             msgForBirthday['To'] = person.email
