@@ -1,8 +1,16 @@
 import readExcel
 import data
+import exportdata
+import sendMail
 
-# read csv file, take relevant columns and only import rows that have values in the relevant columns
-persons = readExcel.readContacts()
-readExcel.printContacts(persons)
 
-data.importData(persons)
+db = data.connectToDB()
+
+# inserted file changed
+if (readExcel.checkForChanges):
+	allContacts = readExcel.readContacts()
+	#readExcel.printContacts(allContacts)
+	data.importData(db, allContacts)
+# no change - database up to date
+todayBirthdayList = exportdata.exportObjectList()
+sendMail.sendMails(todayBirthdayList)

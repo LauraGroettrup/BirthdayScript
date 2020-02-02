@@ -13,14 +13,14 @@ def calculateAge(born):
     return today.year - born.year
     
 def makeBirthdayMessage(person, yourName):
-    birthdayAsDate = datetime.datetime.strptime(person.birthday, '%Y-%m-%d').date()
+    birthdayAsDate = person.birthday
     if (birthdayAsDate.year == 1111):
         msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + yourName
         return msg
     else:
         age = calculateAge(birthdayAsDate)
         ageStr = str(age) + '.'
-        msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum " + ageStr + "Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + YOURNAME
+        msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum " + ageStr + "Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + yourName
         return msg
     
         
