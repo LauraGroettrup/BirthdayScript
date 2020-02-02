@@ -3,8 +3,10 @@ import data
 import exportdata
 import sendMail
 
-
+# connection to mysql saved in variable db
 db = data.connectToDB()
+# check if database birthdays exists: return boolean
+
 
 # inserted file changed
 if (readExcel.checkForChanges):
