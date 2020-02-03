@@ -21,7 +21,6 @@ class Person:
 # Reads the timestamp of the csv file and saves it in the timeStampFile.txt
 def checkForChanges():
     contactModifiedDate = time.ctime(os.path.getmtime(CONTACTFILE))
-    print(contactModifiedDate)
     try:
         if os.path.isfile(TIMESTAMPFILE):
             oldModifiedFile = open(TIMESTAMPFILE, "r")
@@ -36,7 +35,6 @@ def checkForChanges():
                 return True          
         #file didn't exist -> first time this script is running
         else:
-            print('Did not exist yet')
             oldModifiedFile = open(TIMESTAMPFILE,"w+")
             oldModifiedFile.write(contactModifiedDate)
             oldModifiedFile.close()
