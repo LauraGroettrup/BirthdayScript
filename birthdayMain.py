@@ -3,17 +3,22 @@ import data
 import exportdata
 import sendMail
 
-#cronjob at midnight every day
-# go to crontab -> add correct times and command "birthdayMain.py" (check if python interpreter has to be added before the script)
-# connection to mysql saved in variable db
+
+# calls function connectoToDB from module data
+# assigns db object (connection) to var db
 db = data.connectToDB()
 
-# check if 'inserted file' changed
+# if csv-contacts-file changed -> csv-file is read and exported as an object list (Person)
 if (readExcel.checkForChanges()):
     print('fill db')
+	#csv-file is read, exported as list (assigned to var allContacts)
     allContacts = readExcel.readContacts()
-	#readExcel.printContacts(allContacts)
+	# data from Person object list is imported into database birthdays
     data.importData(db, allContacts)
+
 # no change - database up to date
+# exports list with Person objects (whose birthday it is)
 todayBirthdayList = exportdata.exportObjectList()
+
+# e-mail is sent to birthday person(s) and yourself 
 sendMail.sendMails(todayBirthdayList)
