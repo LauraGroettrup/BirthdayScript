@@ -8,13 +8,7 @@ def exportObjectList():
 
 	today = datetime.now().strftime('%m-%d')
 	
-	'''class Person:
-		def __init__(self, firstname, lastname, birthday, email):
-			self.firstname = firstname
-			self.lastname = lastname
-			self.birthday = birthday
-			self.email = email
-	'''
+	
 	try:
 
 		connection = mysql.connector.connect(

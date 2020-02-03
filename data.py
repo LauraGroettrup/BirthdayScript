@@ -31,12 +31,13 @@ def importData(db, allContacts):
 	cursor.execute("create database birthdays")
 	cursor.execute("use birthdays")	
 	cursor.execute("create table if not exists persons (firstName varchar(30) not null, lastName varchar (40), birthday date not null, email varchar (50) not null primary key)")	
-	
+	print ("table persons created")
 	sql = "INSERT INTO persons (firstName, lastName, birthday, email) VALUES (%s, %s, %s, %s)"
+	
 
 	for x in allContacts:
 		cursor.execute(sql, (x.firstname, x.lastname, x.birthday, x.email))
-	
+	print ("persons inserted into db")
 		
 	db.commit()
 
