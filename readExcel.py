@@ -36,6 +36,7 @@ def checkForChanges():
                 return True          
         #file didn't exist -> first time this script is running
         else:
+            print('Did not exist yet')
             oldModifiedFile = open(TIMESTAMPFILE,"w+")
             oldModifiedFile.write(contactModifiedDate)
             oldModifiedFile.close()
