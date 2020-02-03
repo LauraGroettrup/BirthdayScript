@@ -13,8 +13,8 @@ Email-Account:
 - Open the file EmailAccData.txt
 - Change the email-address to your email-address
 - Encode your Email Password with [ROT13](https://gc.de/gc/rot13/) and replace the second line with it
-- replace the last line with your name
-OR use the example Mail Adresse given in the EmailAccData.txt. To log in, you have to decode the Password (second line) with Rot13 <br>
+- replace the last line with your name<br>
+OR use the example Mail Adresse given in the EmailAccData.txt. To log in, you have to decode the Password (second line) with Rot13
 
 Python:	
 - Install Python 3.2 or higher
