@@ -1,6 +1,7 @@
 # BirthdayScript
 ## Description
 A python script that automatically sends an E-mail to persons in your contacts, if it is their birthday. It addition, it sends an E-mail to you to inform you that a congratulation E-mail has been sent.
+Works under Windows 10.
 ## Execution Guide
 To run this script, following preparations have to be done:
 
