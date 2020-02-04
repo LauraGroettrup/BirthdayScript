@@ -25,7 +25,15 @@ python -m pip install mysql-connector
 MySQL:
 - Download mysql-installer-community-8.0.19.0.msi (https://dev.mysql.com/downloads/installer) and setup the workbench
 - Configure a connection to Python (via mysql-connector) - set host, user, password
-- Adapt your host, user and password in the files data.py (functions: connectToDB() and connectToBirthdays()) and exportdata.py (function: exportObjectList())
+
+Batchfile:
+- Open the birthdayScript.bat
+- You have to replace the first string between the "" with your path to your python interpreter. If you don't know the path, write the command
+```shell
+where python
+```
+in your terminal.
+- Replace the second parameter with the path to the birthdayScript.bat
 
 Cronjob:
 - To run the cronjob, go to your Task Scheduler
