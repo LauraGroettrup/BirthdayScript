@@ -6,7 +6,7 @@ def connectToDB():
 	db = mysql.connector.connect(
 		host="localhost",
 		user ="root",
-		passwd="IwidLG47mBadS."
+		passwd=""
 	)
 	return db
 
@@ -16,7 +16,7 @@ def connectToBirthdays():
 		db = mysql.connector.connect(
 			host="localhost",
 			user ="root",
-			passwd ="IwidLG47mBadS.",
+			passwd ="",
 			database="birthdays")
 		#print ("true")
 		return True

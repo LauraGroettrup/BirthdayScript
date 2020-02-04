@@ -14,7 +14,7 @@ def exportObjectList():
 		connection = mysql.connector.connect(
 			host="localhost",
 			user ="root",
-			passwd="IwidLG47mBadS.",
+			passwd="",
 			database = "birthdays"
 		)
 		# prepares sql-query-statement
