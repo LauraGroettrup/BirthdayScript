@@ -1,6 +1,8 @@
 # BirthdayScript
 ## Description
 A python script that automatically sends an E-mail to persons in your contacts, if it is their birthday. It addition, it sends an E-mail to you to inform you that a congratulation E-mail has been sent.
+
+This script works under Windows 10.
 ## Execution Guide
 To run this script, following preparations have to be done:
 
@@ -25,14 +27,23 @@ python -m pip install mysql-connector
 MySQL:
 - Download mysql-installer-community-8.0.19.0.msi (https://dev.mysql.com/downloads/installer) and setup the workbench
 - Configure a connection to Python (via mysql-connector) - set host, user, password
+- Adapt your host, user and password in the files data.py (functions: connectToDB() and connectToBirthdays()) and exportdata.py (function: exportObjectList())
 
+Batchfile:
+- Open the birthdayScript.bat
+- You have to replace the first string between the "" with your path to your python interpreter. If you don't know the path, write the command
+```shell
+where python
+```
+in your terminal.
+- Replace the second parameter with the path to the birthdayScript.bat
 
 Cronjob:
 - To run the cronjob, go to your Task Scheduler
 - Create task 
 	- general: Enter the name of the task, mark "execute with highest privileges", select your Windows Version
 	- trigger: New -> Start: date> today time >midnight Run: daily
-	- actions: New -> Action: start program   Program/Script: Path to python.exe    Arguments: Path to birthdayMain.py
+	- actions: New -> Action: start program   Program/Script: Path to birthdayScript.bat
 - Run your task manually to check if it works (at midnight it should run automatically)
 
 ## About us
