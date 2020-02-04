@@ -1,6 +1,6 @@
 Name,Given Name,Additional Name,Family Name,Yomi Name,Given Name Yomi,Additional Name Yomi,Family Name Yomi,Name Prefix,Name Suffix,Initials,Nickname,Short Name,Maiden Name,Birthday,Gender,Location,Billing Information,Directory Server,Mileage,Occupation,Hobby,Sensitivity,Priority,Subject,Notes,Language,Photo,Group Membership,E-mail 1 - Type,E-mail 1 - Value,Address 1 - Type,Address 1 - Formatted,Address 1 - Street,Address 1 - City,Address 1 - PO Box,Address 1 - Region,Address 1 - Postal Code,Address 1 - Country,Address 1 - Extended Address
 Anna Annmann,Anna,,Annmann,,,,,,,,,,,1992-12-01,,,,,,,,,,,,,,* myContacts,* ,Anna123.Anmann@gmail.com,,,,,,,,,
-Laura Gröttrup,Laura,,Gröttrup,,,,,,,,,,,--02-04,,,,,,,,,,,,,,* myContacts,* ,laura@groerttup.com,,,,,,,,,
+Hans Fischer,Laura,,Gröttrup,,,,,,,,,,, --02-04,,,,,,,,,,,,,,* myContacts,* ,laura@groettrup.com,,,,,,,,,
 Hans Fischer,Hans,,Fischer,,,,,,,,,,, --11-11,,,,,,,,,,,,,,* myContacts,* ,Hans.Fischer@gmail.com,,,,,,,,,
 Kein Geburtstag,Kein,,Geburtstag,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* ,kein.geburtstag@gmail.com,,,,,,,,,
 Keine Email,Keine,,Email,,,,,,,,,,,1984-05-13,,,,,,,,,,,,,,* myContacts,,,,,,,,,,,
@@ -11,6 +11,3 @@ Mama,Mama,,,,,,,,,,,,,1969-09-13,,,,,,,,,,,,,,* myContacts,* ,the.Mama@web.de,,,
 Papa,Papa,,,,,,,,,,,,,1972-06-12,,,,,,,,,,,,,,* myContacts,* ,the.papa@web.de,,,,,,,,,
 Tina Turner,Tina,,Turner,,,,,,,,,,,1994-05-21,,,,,,,,,,,,,,* myContacts,* ,Tina.turner@gmail.com,,,,,,,,,
 Ulrike Gartler,Ulrike,,Gartler,,,,,,,,,,,1999-02-04,,,,,,,,,,,,,,* myContacts,* ,paunobia82@gmail.com,,,,,,,,,
-
-
-
