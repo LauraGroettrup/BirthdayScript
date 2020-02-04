@@ -30,9 +30,9 @@ MySQL:
 Cronjob:
 - To run the cronjob, go to your Task Scheduler
 - Create task 
-	-- general: Enter the name of the task, mark "execute with highest privileges", select your Windows Version
-	--*trigger: New -> Start: date> today time >midnight Run: daily
-	-- actions: New -> Action: start program   Program/Script: Path to python.exe    Arguments: Path to birthdayMain.py
+	- general: Enter the name of the task, mark "execute with highest privileges", select your Windows Version
+	- trigger: New -> Start: date> today time >midnight Run: daily
+	- actions: New -> Action: start program   Program/Script: Path to python.exe    Arguments: Path to birthdayMain.py
 - Run your task manually to check if it works (at midnight it should run automatically)
 
 ## About us
