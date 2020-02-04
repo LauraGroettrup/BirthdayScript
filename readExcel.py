@@ -3,13 +3,15 @@ import re
 import datetime
 import os.path
 import time
+import sys
 
+absolutePath = os.path.dirname(os.path.realpath(sys.argv[0]))
 patternNoYear = ' --[^*]*'
 patternToReplace = ' -'
-TIMESTAMPFILE = 'timeStampFile.txt'
-CONTACTFILE = 'contacts.csv'
+TIMESTAMPFILE = absolutePath+'/timeStampFile.txt'
+CONTACTFILE = absolutePath+'/contacts.csv'
 allContacts = []
-
+	
 class Person:
     def __init__(self, firstname, lastname, birthday, email):
         self.firstname = firstname
