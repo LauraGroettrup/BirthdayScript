@@ -4,7 +4,7 @@ import datetime
 import codecs
 
 
-# file with email access data, first line email addresse, second line email password
+# file with email access data, first line email address, second line email password
 USERDATAFILE = 'EmailAccData.txt'
 SMTP_HOST = 'smtp.gmail.com'
 SMTP_PORT = 587
@@ -21,12 +21,12 @@ def calculateAge(born):
 def makeBirthdayMessage(person, yourName):
     birthdayAsDate = person.birthday
     if (birthdayAsDate.year == 1111):
-        msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + yourName
+        msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum Geburtstag! Lass dich feiern und iss viel Kuchen;)\nLiebe Grüße,\n" + yourName
         return msg
     else:
         age = calculateAge(birthdayAsDate)
         ageStr = str(age) + '.'
-        msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum " + ageStr + " Geburtstag! Lass dich feiern und ess viel Kuchen;)\nLiebe Grüße,\n" + yourName
+        msg = "Hallo " + person.firstname+ ",\nalles alles Gute zum " + ageStr + " Geburtstag! Lass dich feiern und iss viel Kuchen;)\nLiebe Grüße,\n" + yourName
         return msg
     
         
