@@ -1,2 +1,2 @@
-"pathToYourInterpreter\python.exe" "pathToYourTheBatchFile\birthdayMain.py"
+"pathToYourInterpreter\python.exe" "pathToTheBatchFile\birthdayMain.py"
 pause
